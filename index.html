@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="theme-color" content="#03040a" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<title>Stellar Drift</title>
+<link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <!-- On-screen controls / HUD -->
+  <div id="hud">
+    <button id="btnBag" class="hbtn topbtn" aria-label="Inventory">🎒</button>
+    <button id="btnContext" class="hbtn ctxbtn">LAND</button>
+    <button id="btnAction" class="hbtn actbtn">MINE</button>
+  </div>
+
+  <!-- Inventory / crafting panel -->
+  <div id="panel">
+    <div class="panelInner">
+      <div class="panelHead">
+        <h2>Cargo &amp; Hyperdrive</h2>
+        <button id="panelClose" class="hbtn">✕</button>
+      </div>
+      <div id="fuelStat" class="stat"></div>
+      <div id="invList" class="invList"></div>
+      <div class="craftBox">
+        <div class="craftLabel">Craft Warp Cell — requires:</div>
+        <div id="recipe" class="recipe"></div>
+        <button id="btnCraft" class="bigbtn">⚙ CRAFT WARP CELL</button>
+      </div>
+      <div id="discStat" class="stat small"></div>
+      <button id="btnReset" class="resetbtn">Reset universe (new game)</button>
+    </div>
+  </div>
+
+  <!-- Title / intro -->
+  <div id="intro">
+    <div class="introInner">
+      <h1>STELLAR&nbsp;DRIFT</h1>
+      <p class="tag">A tiny No Man's Sky — explore an endless procedural galaxy.</p>
+      <ul class="how">
+        <li><b>Left side of screen</b> = virtual joystick to fly / walk</li>
+        <li><b>BOOST / MINE / SCAN</b> = hold the round button (right)</li>
+        <li><b>LAND</b> on a planet, mine resources, <b>SCAN</b> creatures</li>
+        <li>Craft <b>Warp Cells</b> in the 🎒 menu, then <b>WARP ⚡</b> to new stars</li>
+        <li>Watch your <b>LIFE</b> support — return to your ship to refill</li>
+      </ul>
+      <button id="btnPlay" class="bigbtn">▶ PLAY</button>
+      <p class="footnote">Auto-saves to this device · works offline</p>
+    </div>
+  </div>
+
+  <script src="src/rng.js"></script>
+  <script src="src/content.js"></script>
+  <script src="src/input.js"></script>
+  <script src="src/game.js"></script>
+  <script src="src/space.js"></script>
+  <script src="src/planet.js"></script>
+  <script src="src/boot.js"></script>
+</body>
+</html>
